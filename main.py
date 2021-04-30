@@ -9,5 +9,9 @@ bg = pygame.transform.scale(pygame.image.load("bg.jpg"), (w,h))
 
 game = True
 while game:
+    for e in pygame.event.get():
+        if e.type == pygame.QUIT:
+            game = False
+            
     window.blit(bg, (0,0))
     pygame.display.update()
